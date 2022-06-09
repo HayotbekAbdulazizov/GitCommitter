@@ -8,3 +8,4 @@ PyGithub==1.55
 requests==2.22.0
 twilio==7.9.1
 whitenoise==6.2.0
+gunicorn==20.1.0
