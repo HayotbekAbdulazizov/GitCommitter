@@ -22,6 +22,8 @@ MESSAGE_LIST = [
 
 
 def schedule_api():
+    GitProfile.objects.create(username='me', pat='me', full_name = 'men')
+    
     for x in GitProfile.objects.all():
         print(f"Git profile - {x.username}")
         print(f"Git PAT - {x.pat}")
