@@ -1,3 +1,3 @@
 web: gunicorn GitCommitter.wsgi:application --log-file -
-python manage.py collectstatic --noinput    
+web: python manage.py collectstatic --no-input;    
 manage.py migrate
