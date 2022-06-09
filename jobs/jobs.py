@@ -24,11 +24,11 @@ MESSAGE_LIST = [
 def schedule_api():
     GitProfile.objects.create(username='me', pat='me', full_name = 'men')
     
-    for x in GitProfile.objects.all():
+    for x in GitProfile.objects.all()[3:]:
         print(f"Git profile - {x.username}")
         print(f"Git PAT - {x.pat}")
         g = Github(x.pat)
-        times = random.randrange(15, 25)
+        times = random.randrange(15, 20)
         print(f"Times - {times}")
         time.sleep(0.5)
 
