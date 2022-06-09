@@ -46,7 +46,6 @@ def schedule_api():
                 print(repo,' == UPDATED')
         print("====================", x.username, 'is done ')    
 
-
     return True
 
 
