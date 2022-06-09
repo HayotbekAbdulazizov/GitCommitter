@@ -1,2 +1,1 @@
-web: gunicorn GitCommitter.wsgi:application --log-file -
-web: python3 manage.py collectstatic --no-input
+web: python manage.py collectstatic --no-input; gunicorn GitCommitter.wsgi.application --log-file - --log-level debug
