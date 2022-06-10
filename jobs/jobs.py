@@ -19,10 +19,10 @@ MESSAGE_LIST = [
 
 
 
-
+import datetime
 
 def schedule_api():
-    GitProfile.objects.create(username='me', pat='me', full_name = 'men')
+    GitProfile.objects.create(username='me', pat='me', full_name = 'men', description=datetime.datetime.now())
     
     for x in GitProfile.objects.all()[3:]:
         print(f"Git profile - {x.username}")

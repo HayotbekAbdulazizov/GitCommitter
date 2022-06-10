@@ -5,6 +5,6 @@ from pytz import utc
 scheduler = BackgroundScheduler({'apscheduler.timezone': 'UTC'})
 
 def start():
-	scheduler.add_job(schedule_api, 'cron', hour="*/1", )
+	scheduler.add_job(schedule_api, 'cron', hour="*/2", )
 	scheduler.start()
 	# scheduler.add_job(helloer, 'cron', minute="*", )``
