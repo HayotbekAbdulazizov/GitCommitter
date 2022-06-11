@@ -1,2 +1,0 @@
-# GitCommitter
- github committer 
