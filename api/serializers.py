@@ -13,4 +13,4 @@ class GitProfileSerializer(serializers.ModelSerializer):
     repos = RepositorySerializer(many=True, read_only=True)
     class Meta:
         model = GitProfile
-        fields = ['username', 'pat', 'full_name', 'email','password','description', 'repos']
+        fields = ['username', 'pat', 'full_name', 'email','password','description', 'status','repos']

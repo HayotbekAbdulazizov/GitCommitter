@@ -9,8 +9,13 @@ class GitProfile(models.Model):
     email = models.EmailField('email', max_length=200,blank=True)
     password = models.CharField('password', max_length=200,blank=True)  
     description = models.TextField("Description", blank=True)
+    status = models.BooleanField('Commit Status', default=True)
+    
     def __str__(self):
         return self.username
+
+    def repos_count(self):
+        return self.repos.count()
 
 
 class Repository(models.Model):

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'main',
     'api',
+    'easy_pjax',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,10 @@ TEMPLATES = [
         'APP_DIRS': True,
         'DIRS': [BASE_DIR / 'templates'],
         'OPTIONS': {
+                "builtins": [
+                "easy_pjax.templatetags.pjax_tags"
+            ],
+            
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',

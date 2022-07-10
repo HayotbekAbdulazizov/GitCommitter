@@ -12,7 +12,7 @@ class GitProfileAPIView(GenericAPIView, CreateModelMixin):
      queryset = GitProfile.objects.all()
 
      def get(self, request):
-        gitprofiles = GitProfile.objects.all()
+        gitprofiles = GitProfile.objects.filter(status=True)
         serializer = GitProfileSerializer(gitprofiles, many=True)
         return Response(serializer.data)
 

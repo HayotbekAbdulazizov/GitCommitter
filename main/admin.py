@@ -4,8 +4,8 @@ from .models import GitProfile, Repository
 
 @admin.register(GitProfile)
 class GitProfileAdmin(admin.ModelAdmin):
-	list_display = ['username', 'pat', 'full_name','email','password','description']
-	list_display_links = ['username', 'pat', 'full_name','email','password','description']
+	list_display = ['username', 'pat', 'email','status','repos_count' ]
+	list_display_links = ['username', 'pat','email','status','repos_count']
 
 @admin.register(Repository)
 class TagAdmin(admin.ModelAdmin):
